@@ -26,14 +26,18 @@ defineProps({
 .label {
   font-size: 16px;
 }
-
 .v-enter-active,
 .v-leave-active {
-  transition: opacity 0.9s ease;
+  transition: all 0.4s ease;
 }
-
-.v-enter-from,
+.v-enter-from {
+  transform: translateY(-100%) translateX(-50%);
+}
+.v-enter-to,
+.v-leave-from {
+  transform: translateY(0px) translateX(-50%);
+}
 .v-leave-to {
-  opacity: 0;
+  transform: translateY(100%) translateX(-50%);
 }
 </style>
